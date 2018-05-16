@@ -1,0 +1,25 @@
+<ion-header>
+
+    <ion-navbar color ="primary" >
+      <ion-title id="title">Edit</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding  class="master">
+    <form (ngSubmit)="updateData()" name="editForm" id="editForm">        
+        <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" placeholder="" [(ngModel)]="data.name" name="name" required="" value="this.data.name" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Birthday</ion-label>
+            <ion-input type="date" [(ngModel)]="data.birthday" name="birthday" required="" value="this.data.birthday" ></ion-input>
+        </ion-item>
+        <ion-item>
+                <ion-label><b>Don't know the year of birth</b></ion-label>
+                <ion-checkbox color="royal" name="withoutYear"></ion-checkbox>
+        </ion-item>
+        <button ion-button color="secondary"type="submit" block style="margin-top:20px;">Update</button>   
+    </form>
+  </ion-content>

@@ -1,0 +1,52 @@
+
+<ion-header>
+    <ion-toolbar color="danger">
+      <ion-title >Birthdays</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click) ="more()">
+          <ion-icon name="settings"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding class="masters">
+          <ion-list><!--
+            <ion-list-header>
+                Tommorow
+            </ion-list-header>-->                       
+            <ion-item-sliding *ngFor="let bday of birthdays; let i=index" >
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/cake.png">
+                </ion-avatar>
+                <ion-grid>
+                      <ion-row>
+                          <ion-col col-md-6>
+                              <h2 style="margin-top:5px;">{{bday.name}}</h2>
+                              <h3 *ngIf="bday.withoutYear=='false'">{{bday.birthday}}</h3>
+                              <h3 *ngIf="bday.withoutYear=='true'">{{bday.birthdayWitoutYear}}</h3>  
+                              <h3 *ngIf="bday.withoutYear=='false'" >{{bday.left}} days left </h3>
+                          </ion-col>
+                          <ion-col col-md-4  *ngIf="bday.withoutYear=='false'">
+                              <h3 style="text-align:right;float:right;">turns</h3><br>              
+                              <h1 style="text-align:right;float:right;"><b>{{bday.turns}}</b></h1>      
+                          </ion-col>
+                      </ion-row>
+                </ion-grid>     
+              </ion-item>              
+              <ion-item-options side="right" >
+                <button ion-fab color="primary" (click)="editData(bday.rowid)" id="btnOptionA">
+                  <ion-icon name="paper"></ion-icon>
+                </button>
+                <button ion-fab color="danger" (click)="deleteData(bday.rowid)" id="btnOptionB">
+                  <ion-icon name="trash"></ion-icon>
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
+      
+          <button ion-fab color="danger" (click) ="addNew()" id="btnAdd"><ion-icon name="add"></ion-icon></button>
+        
+  </ion-content>
+  

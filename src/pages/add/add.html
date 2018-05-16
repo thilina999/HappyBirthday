@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar color ="primary" >
+        <ion-title id="title">Add New</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="master">
+    
+    <form (ngSubmit)="saveData()" name="addForm" id="addForm">        
+        <ion-item> 
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" placeholder="" [(ngModel)]="data.name" name="name" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Birthday</ion-label>
+            <ion-input type="date" [(ngModel)]="data.birthday" name="birthday" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label><b>Don't know the year of birth</b></ion-label>
+            <ion-checkbox color="royal" [(ngModel)]="data.withoutYear" name="withoutYear"></ion-checkbox>
+        </ion-item>
+        <button ion-button color="secondary"type="submit" block style="margin-top:20px;">Add</button>       
+        
+    </form>
+</ion-content>
