@@ -10,7 +10,6 @@ import { Toast } from '@ionic-native/toast';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 
 import { AboutPage } from '../pages/about/about';
-import { HomePage } from '../pages/home/home';
 import { AddPage } from '../pages/add/add';
 import { EditPage } from '../pages/edit/edit';
 import { MorePage } from '../pages/more/more';
@@ -21,7 +20,6 @@ import { SlidesPage } from '../pages/slides/slides';
   declarations: [
     MyApp,
     AboutPage,
-    HomePage,
     AddPage,
     EditPage,
     MorePage,
@@ -35,7 +33,6 @@ import { SlidesPage } from '../pages/slides/slides';
   entryComponents: [
     MyApp,
     AboutPage,
-    HomePage,
     AddPage,
     EditPage,
     MorePage,
