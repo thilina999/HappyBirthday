@@ -9,6 +9,7 @@ import { SQLite } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 
+import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { AddPage } from '../pages/add/add';
 import { EditPage } from '../pages/edit/edit';
@@ -19,6 +20,7 @@ import { SlidesPage } from '../pages/slides/slides';
 @NgModule({
   declarations: [
     MyApp,
+    HomePage,
     AboutPage,
     AddPage,
     EditPage,
@@ -32,6 +34,7 @@ import { SlidesPage } from '../pages/slides/slides';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomePage,
     AboutPage,
     AddPage,
     EditPage,
