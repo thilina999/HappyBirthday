@@ -2,9 +2,12 @@
 <ion-header>
   <ion-toolbar color ="primary">
     <ion-title >Birthdays</ion-title>
-    <ion-buttons end>
+    <ion-buttons end><!-- 
       <button ion-button icon-only (click) ="more()">
         <ion-icon name="settings"></ion-icon>
+      </button>-->
+      <button ion-fab color="danger" icon-only (click) ="addNew()" style="height: 40px;width: 40px;">
+        <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -46,6 +49,6 @@
           </ion-item-sliding>
         </ion-list>
     
-        <button ion-fab color="danger" (click) ="addNew()" id="btnAdd"><ion-icon name="add"></ion-icon></button>
+        <!-- <button ion-fab color="danger" (click) ="addNew()" id="btnAdd"><ion-icon name="add"></ion-icon></button>-->
       
 </ion-content>

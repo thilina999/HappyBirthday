@@ -75,7 +75,7 @@ let birthday_month=birthday_date.getMonth()+1;
   this.localNotifications.schedule({
     title:"Birthdays",
     text: "Hey, it's "+this.data.name+"'s birthday.",
-    every: { month: birthday_month, day: birthday_day, hour: 21, minute: 45 }, 
+    every: { month: birthday_month, day: birthday_day, hour: 6, minute: 0 }, 
     led: 'FF720B',
     vibrate: true,
     sound: this.platform.is('android') ? 'file://assets/sounds/definite.mp3': 'file://assets/sounds/definite.caf',
