@@ -108,5 +108,21 @@ export class HomePage {
     }).catch(e => console.log(e));
   }
 
+  getItems(ev) {
+    this.toast.show("Deleted", '5000', 'bottom');
+    // Reset items back to all of the items
+    //this.initializeItems();
+
+    // set val to the value of the ev target
+    var val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.birthdays = this.birthdays.filter((birthday) => {
+        return (birthday.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
+
 
 }
