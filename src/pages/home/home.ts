@@ -18,18 +18,19 @@ export class HomePage {
   birthdays: any = [];
   descending: boolean = false;
   order: number;
-  column: string = 'name';
+  column: string = 'left';
 
   constructor( public navCtrl: NavController,private sqlite: SQLite,private toast: Toast) { 
   }
   
   ionViewDidLoad() {
     this.getData();
-    
+    this.sort();
   }
   
   ionViewWillEnter() {
     this.getData();
+    this.sort();
   }
   
   getData() {
