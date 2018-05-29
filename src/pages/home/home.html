@@ -10,7 +10,8 @@
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
+    <button ion-button type="button" (click)="sort()">Sort</button>
   </ion-toolbar>
 </ion-header>
 
@@ -19,7 +20,7 @@
           <ion-list-header>
               Tommorow //have to change
           </ion-list-header>-->                       
-          <ion-item-sliding *ngFor="let bday of birthdays; let i=index" >
+          <ion-item-sliding *ngFor="let bday of birthdays | search : terms | sort: {property: column, order: order}" >
             <ion-item>
               <ion-avatar item-start>
                 <img src="assets/imgs/cake.png">

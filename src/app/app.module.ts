@@ -15,6 +15,9 @@ import { EditPage } from '../pages/edit/edit';
 import { MorePage } from '../pages/more/more';
 import { SlidesPage } from '../pages/slides/slides';
 
+import { SearchPipe } from '../pipes/search/search';
+import { SortPipe } from '../pipes/sort/sort';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { SlidesPage } from '../pages/slides/slides';
     AddPage,
     EditPage,
     MorePage,
-    SlidesPage
+    SlidesPage,
+    SearchPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

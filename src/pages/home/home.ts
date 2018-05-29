@@ -16,6 +16,9 @@ import { MorePage } from '../more/more';
 export class HomePage {
  
   birthdays: any = [];
+  descending: boolean = false;
+  order: number;
+  column: string = 'name';
 
   constructor( public navCtrl: NavController,private sqlite: SQLite,private toast: Toast) { 
   }
@@ -122,6 +125,11 @@ export class HomePage {
         return (birthday.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
+  }
+
+  sort(){
+    this.descending = !this.descending;
+    this.order = this.descending ? 1 : -1;
   }
 
 
