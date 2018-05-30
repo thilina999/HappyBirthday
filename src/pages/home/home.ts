@@ -16,7 +16,7 @@ import { MorePage } from '../more/more';
 export class HomePage {
  
   birthdays: any = [];
-  descending: boolean = false;
+  descending: boolean = true;
   order: number;
   column: string = 'left';
 

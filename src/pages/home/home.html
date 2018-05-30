@@ -1,24 +1,28 @@
 <!-- have to add lazy loading -->
 <ion-header>
   <ion-toolbar color ="primary">
-    <ion-title >Birthdays</ion-title>
-    <ion-buttons end><!-- 
-      <button ion-button icon-only (click) ="more()">
-        <ion-icon name="settings"></ion-icon>
-      </button>-->
-      <button ion-fab color="danger" icon-only (click) ="addNew()" style="height: 40px;width: 40px;">
-        <ion-icon name="add"></ion-icon>
+    <ion-buttons left>
+      <button ion-button  icon-only (click) ="addNew()" style="height: 40px;width: 40px;">
+          <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
+    <ion-title >Birthdays</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click) ="more()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
+    <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
 </ion-header>
 
 <ion-content padding class="masters">
-        <ion-list><!--
+        <ion-list>
+          <!--
           <ion-list-header>
               Tommorow //have to change
-          </ion-list-header>-->                       
+          </ion-list-header>
+         -->                       
           <ion-item-sliding *ngFor="let bday of birthdays | search : terms | sort: {property: column, order: order}" >
             <ion-item>
               <ion-avatar item-start>
@@ -50,6 +54,13 @@
           </ion-item-sliding>
         </ion-list>
     
-        <!-- <button ion-fab color="danger" (click) ="addNew()" id="btnAdd"><ion-icon name="add"></ion-icon></button>-->
-      
+        <!--
+          <button ion-fab color="danger" icon-only (click) ="addNew()" style="height: 40px;width: 40px;">
+          <ion-icon name="add"></ion-icon>
+        </button>
+          
+          
+          <button ion-fab color="danger" (click) ="addNew()" id="btnAdd"><ion-icon name="add"></ion-icon></button>
+        
+        -->
 </ion-content>
