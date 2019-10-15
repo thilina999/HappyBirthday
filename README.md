@@ -1,2 +1,3 @@
 # HappyBirthday
-An ionic app to save birthdays of your loved ones.
+An app to save birthdays of your loved ones.
+This was done by using ionic framework.
